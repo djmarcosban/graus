@@ -27,8 +27,8 @@
 			</div>
 			<div id="redes-telefone" class="col-3 d-flex align-items-center justify-content-between pr-0">
 				<a href="tel:(62) 3586-5656"><b>(62) 3586-5656</b></a>
-				<a href="https://facebook.com/"><img src="img/fb.png" width="20" alt="Facebook"></a>
-				<a href="https://instagram.com/"><img src="img/ig.png" width="20" alt="Instagram"></a>
+				<a href="https://www.facebook.com/graussolucoes/"><img src="img/fb.png" width="20" alt="Facebook"></a>
+				<a href="https://instagram.com/graus_refrigeracao"><img src="img/ig.png" width="20" alt="Instagram"></a>
 
 			</div>
 		</div>
@@ -219,8 +219,6 @@
 					CNPJ 04.180.940/0001-60
 				</p>
 				<p>
-					Graus Comércio e Serviços LTDA – ME<br>
-					CNPJ 04.180.940/0001-60<br>
 					Avenida Mato Grosso do Sul, 173<br>
 					Setor Perim, Goiânia – GO <br>
 					CEP 74580-150<br>
