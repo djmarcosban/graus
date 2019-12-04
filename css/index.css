@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:500,700,900&display=swap');
+body{font-size: 1rem!important; font-family: 'Maven Pro', sans-serif; font-weight: 500!important;}
+.bg-blue1{background-color: #bfdce6!important; color: #3c445e!important}
+.bg-blue2{background-color: #3c445e!important; color: #fff!important}
+.color-blue2 a, .color-blue2{color: #3c445e!important}
+.color-blue1{color: #bfdce6!important}
+#redes-telefone{font-weight: 900!important;}
+#redes-telefone a{display: flex; align-items: center;}
+#menu{font-weight: 900!important;}
+#menu-topo a, #redes-telefone a{color:#3c445e;}
+#menu-topo a:hover, #redes-telefone a:hover{text-decoration: underline;}
+button.bg-blue1{font-size: 1.2rem}
+button.bg-blue1:hover{background-color: white!important}
+h1{line-height: 38px}
+p{font-size: 1.2rem; line-height: 22px}
+a.nav-link{display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem}
+.nav-pills .nav-link{background-color: #bfdce6; border-radius: 0; font-weight: 900; color: #3c445e; border-bottom: 1px solid #3c445e}
+.nav-pills .nav-link.active{background-color: white; color:#3c445e}
+#c-form{background-image: url('../img/bg-form.png'); }
+@media(max-width: 1024px){
+	h1{line-height: initial!important; font-size: 1.4rem; text-align: center;}
+	p{font-size: 1rem; line-height:19px}
+	#menu-topo{display: none!important;}
+	#redes-telefone{flex: 0 0 100%!important; max-width: 100%!important; padding-left: 0!important; justify-content: space-around!important; font-size: .9em!important}
+	#menu > .container > .row{flex-direction: column; justify-content: center; align-items: center;}
+	#menu > .container > .row > div{max-width: 100%!important; flex:0 0 100%!important; padding: 0!important; display: flex; justify-content: center;}
+	#menu > .container > .row > div:first-child{margin-bottom: 25px}
+	#menu > .container > .row > div > img{width: 30%}
+	#fale{padding-top: 15px; padding-bottom: 15px}
+	#fale > .container{padding:0!important;}
+	#fale > .container > .row{margin:0!important;}
+	#fale > .container > .row > .col-6:first-child{display: none}
+	#fale > .container > .row > .col-6:nth-child(2){max-width: 100%!important; flex: 0 0 100%!important; padding: 0}
+	#empresa > .container{padding:0!important;}
+	#empresa > .container > .row{flex-direction: column; justify-content: center; align-items: center;}
+	#empresa > .container > .row > div:first-child{margin-bottom: 25px}
+	#empresa > .container > .row > div{max-width: 100%!important; flex:0 0 100%!important;}
+	#autorizadas > .container > .row > div > div{flex-flow: wrap; justify-content: center!important;}
+	#servicos > .container > .row > div{flex:0 0 100%!important; max-width: 100%!important; padding: 0!important}
+	#servicos > .container > .row > .col-8{margin-top: 20px}
+	#servicos > .container > .row:nth-child(2){margin-top: 5px!important;}
+	#contato{flex:0 0 100%!important; max-width: 100%!important; padding: 0!important}
+	#contato > h2{margin-bottom: 25px!important}
+	#form > .row{padding-left: 15px; padding-right: 15px}
+	#form > .row > div{flex:0 0 100%!important; max-width: 100%!important; padding: 0!important}
+	#rodape > .container > .row > div{flex:0 0 100%!important; max-width: 100%!important; padding: 0!important}
+	#footer > .container > .row > div{flex-direction: column; padding: 0; text-align: center;}
+	#footer > .container > .row > div > div{margin-bottom: 20px}
+}
+@media(max-width: 768px){
+	#menu > .container > .row > div > img{width: 30%}
+}
+@media(max-width: 768px){
+	#menu > .container > .row > div > img{width: 60%}
+}
+
+#aguarde{background-color: rgb(60, 69, 94, 0.9); color:#fff; height: 100vh}
+#aguarde > span{font-size: 2em; font-weight: bold}
+#aguarde > span::after{content:'Aguarde...';}
+.hide{display: none;}
+.show{display: block;}
