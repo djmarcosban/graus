@@ -126,38 +126,45 @@
 		      <a class="nav-link" id="b-tab" data-toggle="pill" href="#b" role="tab" aria-controls="b" aria-selected="false">Manutenção Corretiva <i class="fas fa-chevron-right"></i></a>
 		      <a class="nav-link" id="c-tab" data-toggle="pill" href="#c" role="tab" aria-controls="c" aria-selected="false">Instalação <i class="fas fa-chevron-right"></i></a>
 		      <a class="nav-link" id="d-tab" data-toggle="pill" href="#d" role="tab" aria-controls="d" aria-selected="false">Fast Service <i class="fas fa-chevron-right"></i></a>
-		      <a class="nav-link" id="d-tab" data-toggle="pill" href="#d" role="tab" aria-controls="d" aria-selected="false">Movimentação <i class="fas fa-chevron-right"></i></a>
+		      <a class="nav-link" id="e-tab" data-toggle="pill" href="#e" role="tab" aria-controls="e" aria-selected="false">Movimentação <i class="fas fa-chevron-right"></i></a>
 		    </div>
 		  </div>
 		  <div class="col-8">
 		    <div class="tab-content" id="v-pills-tabContent">
 		      <div class="tab-pane fade show active" id="a" role="tabpanel" aria-labelledby="a-tab">
 		      	<div class="d-flex align-items-center mb-4">
-		      		<img src="img/a.png" width="50" alt="">
+		      		<img src="img/man-preventiva.png" width="50" alt="">
 		      		<h4 style="font-weight: 900" class="mb-0 ml-3 text-uppercase">Manutenção Preventiva</h4>
 		      	</div>
-				<p>Obedece um cronograma estabelecido pelo fabricante. Um profissional com treinamento específico analisa itens críticos em cada fase da vida útil. O objetivo é manter a eficiência, a estética e até preservar o valor do equipamento. Os serviços são feitos no local, diminuindo o tempo de execução e não interferindo no funcionamento do seu negócio.</p>
+				<p>Obedece um cronograma estabelecido pelo fabricante. Um profissional com treinamento específico analisa itens críticos em cada fase da vida útil. O objetivo é manter a eficiência, a estética e até preservar o valor do equipamento. Os serviços são feitos no local, diminuindo o tempo de execução e não interferindo no funcionamento do seu negócio. </p>
 		      </div>
 		      <div class="tab-pane fade" id="b" role="tabpanel" aria-labelledby="b-tab">
 		      	<div class="d-flex align-items-center mb-4">
-		      		<img src="img/a.png" width="50" alt="">
-		      		<h4 style="font-weight: 900" class="mb-0 ml-3 text-uppercase">Manutenção Preventiva</h4>
+		      		<img src="img/man-corretiva.png" width="50" alt="">
+		      		<h4 style="font-weight: 900" class="mb-0 ml-3 text-uppercase">Manutenção Corretiva</h4>
 		      	</div>
-				<p>Obedece um cronograma estabelecido pelo fabricante. Um profissional com treinamento específico analisa itens críticos em cada fase da vida útil. O objetivo é manter a eficiência, a estética e até preservar o valor do equipamento. Os serviços são feitos no local, diminuindo o tempo de execução e não interferindo no funcionamento do seu negócio.</p>
+				<p>Quando seu equipamento para, a gente se movimenta rapidamente para resolver. Nossa manutenção é eficiente e os reparos necessários são feitos no próprio local. Nada de complicação e perda de tempo, nosso objetivo é simples: resolver seu problema o mais rápido possível.</p>
 		      </div>
 		      <div class="tab-pane fade" id="c" role="tabpanel" aria-labelledby="c-tab">
 		      	<div class="d-flex align-items-center mb-4">
-		      		<img src="img/a.png" width="50" alt="">
-		      		<h4 style="font-weight: 900" class="mb-0 ml-3 text-uppercase">Manutenção Preventiva</h4>
+		      		<img src="img/instalacao.png" width="50" alt="">
+		      		<h4 style="font-weight: 900" class="mb-0 ml-3 text-uppercase">Instalação</h4>
 		      	</div>
-				<p>Obedece um cronograma estabelecido pelo fabricante. Um profissional com treinamento específico analisa itens críticos em cada fase da vida útil. O objetivo é manter a eficiência, a estética e até preservar o valor do equipamento. Os serviços são feitos no local, diminuindo o tempo de execução e não interferindo no funcionamento do seu negócio.</p>
+				<p>O local e a forma de instalar o equipamento influencia o desempenho, a confiabilidade e a durabilidade. Uma equipe treinada da Graus vai até o seu negócio e avalia todos esses pontos, além de fazer a instalação correta, mantendo a garantia e a máxima performance do seu equipamento.</p>
 		      </div>
 		      <div class="tab-pane fade" id="d" role="tabpanel" aria-labelledby="d-tab">
 		      	<div class="d-flex align-items-center mb-4">
-		      		<img src="img/a.png" width="50" alt="">
-		      		<h4 style="font-weight: 900" class="mb-0 ml-3 text-uppercase">Manutenção Preventiva</h4>
+		      		<img src="img/fast-service.png" width="50" alt="">
+		      		<h4 style="font-weight: 900" class="mb-0 ml-3 text-uppercase">Fast Service</h4>
 		      	</div>
-				<p>Obedece um cronograma estabelecido pelo fabricante. Um profissional com treinamento específico analisa itens críticos em cada fase da vida útil. O objetivo é manter a eficiência, a estética e até preservar o valor do equipamento. Os serviços são feitos no local, diminuindo o tempo de execução e não interferindo no funcionamento do seu negócio.</p>
+				<p>Todo mundo diz que tempo é dinheiro, mas quando o assunto é refrigeração, tempo é muito dinheiro. Por isso, nosso compromisso é equipe no seu negócio em, no máximo, 3 horas nos endereços na região da Grande Goiânia. Pense rápido e escolha o serviço mais ágil e confiável da cidade.</p>
+		      </div>
+		      <div class="tab-pane fade" id="e" role="tabpanel" aria-labelledby="e-tab">
+		      	<div class="d-flex align-items-center mb-4">
+		      		<img src="img/movimentacao.png" width="50" alt="">
+		      		<h4 style="font-weight: 900" class="mb-0 ml-3 text-uppercase">Movimentação</h4>
+		      	</div>
+				<p>Equipamentos de refrigeração são sensíveis à movimentação. Sempre que você precisar movê-los, tenha a segurança de uma equipe técnica que conhece profundamente o maquinário e sabe como leva-los para onde você precisa com a segurança que seu patrimônio merece.</p>
 		      </div>
 		    </div>
 		  </div>
