@@ -5,8 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>BITPRO Conexão & Didática</title>
-	<base href="https://bitproedu.com.br/professor/">
+	<title>Graus</title>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -18,471 +17,305 @@
 </head>
 <body <?php if(isset($_GET['anime'])){echo 'onload="anime(\''.$_GET['anime'].'\')"';}?>>
 
-	<section class="container-fluid mx-auto p-0">
-		<div class="row m-0 h-100">
-			<div class="col-md-6">
-				<div class="row offset-md-5 mt-3" id="logo">
-					<a href="https://bitproedu.com.br/"><img src="img/logo.png" alt="Bitpro" width="280"></a>
-				</div>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:500,700,900&display=swap');
+body{font-size: 1rem!important; font-family: 'Maven Pro', sans-serif; font-weight: 500!important;}
+.bg-blue1{background-color: #bfdce6!important; color: #3c445e!important}
+.bg-blue2{background-color: #3c445e!important; color: #fff!important}
+.color-blue2 a, .color-blue2{color: #3c445e!important}
+.color-blue1{color: #bfdce6!important}
+#redes-telefone{font-weight: 900!important;}
+#redes-telefone a{display: flex; align-items: center;}
+#menu{font-weight: 900!important;}
+#menu-topo a, #redes-telefone a{color:#3c445e;}
+#menu-topo a:hover, #redes-telefone a:hover{text-decoration: underline;}
+button.bg-blue1{font-size: 1.2rem}
+button.bg-blue1:hover{background-color: white!important}
+h1{line-height: 38px}
+p{font-size: 1.2rem; line-height: 22px}
+a.nav-link{display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem}
+.nav-pills .nav-link{background-color: #bfdce6; border-radius: 0; font-weight: 900; color: #3c445e; border-bottom: 1px solid #3c445e}
+.nav-pills .nav-link.active{background-color: white; color:#3c445e}
+#c-form{background-image: url('img/bg-form.png'); }
+@media(max-width: 1024px){
+	h1{line-height: initial!important; font-size: 1.4rem; text-align: center;}
+	p{font-size: 1rem; line-height:19px}
+	#menu-topo{display: none!important;}
+	#redes-telefone{flex: 0 0 100%!important; max-width: 100%!important; padding-left: 0!important; justify-content: space-around!important; font-size: .9em!important}
+	#menu > .container > .row{flex-direction: column; justify-content: center; align-items: center;}
+	#menu > .container > .row > div{max-width: 100%!important; flex:0 0 100%!important; padding: 0!important; display: flex; justify-content: center;}
+	#menu > .container > .row > div:first-child{margin-bottom: 25px}
+	#menu > .container > .row > div > img{width: 30%}
+	#fale{padding-top: 15px; padding-bottom: 15px}
+	#fale > .container{padding:0!important;}
+	#fale > .container > .row{margin:0!important;}
+	#fale > .container > .row > .col-6:first-child{display: none}
+	#fale > .container > .row > .col-6:nth-child(2){max-width: 100%!important; flex: 0 0 100%!important; padding: 0}
+	#empresa > .container{padding:0!important;}
+	#empresa > .container > .row{flex-direction: column; justify-content: center; align-items: center;}
+	#empresa > .container > .row > div:first-child{margin-bottom: 25px}
+	#empresa > .container > .row > div{max-width: 100%!important; flex:0 0 100%!important;}
+	#autorizadas > .container > .row > div > div{flex-flow: wrap; justify-content: center!important;}
+	#servicos > .container > .row > div{flex:0 0 100%!important; max-width: 100%!important; padding: 0!important}
+	#servicos > .container > .row > .col-8{margin-top: 20px}
+	#servicos > .container > .row:nth-child(2){margin-top: 5px!important;}
+	#contato{flex:0 0 100%!important; max-width: 100%!important; padding: 0!important}
+	#contato > h2{margin-bottom: 25px!important}
+	#form > .row{padding-left: 15px; padding-right: 15px}
+	#form > .row > div{flex:0 0 100%!important; max-width: 100%!important; padding: 0!important}
+	#rodape > .container > .row > div{flex:0 0 100%!important; max-width: 100%!important; padding: 0!important}
+	#footer > .container > .row > div{flex-direction: column; padding: 0; text-align: center;}
+	#footer > .container > .row > div > div{margin-bottom: 20px}
+}
+@media(max-width: 768px){
+	#menu > .container > .row > div > img{width: 30%}
+}
+@media(max-width: 768px){
+	#menu > .container > .row > div > img{width: 60%}
+}
+
+#aguarde{background-color: rgb(60, 69, 94, 0.9); color:#fff; height: 100vh}
+#aguarde > span{font-size: 2em; font-weight: bold}
+#aguarde > span::after{content:'Aguarde...';}
+.hide{display: none;}
+.show{display: block;}
+
+</style>
+
+<section class="container-fluid bg-blue1 pt-1 pb-1">
+	<div class="container">
+		<div class="row d-flex justify-content-between align-items-center">
+			<div id="menu-topo" class="col-3 pl-0 d-flex align-items-center justify-content-between">
+					<a href="javascript:;" onclick="anime('contato');">Cadastre-se</a>
+					<a href="javascript:;" onclick="anime('contato');">Fale conosco</a>
+				</ul>
 			</div>
-			<div class="col-md-6 p-0">
-				<div class="row m-0 bg-blue p-3 font-weight-bold" id="bg-menu">
-					<ul class="d-flex justify-content-between col-8 mt-3" id="menu">
-						<li><a href="https://bitproedu.com.br/?anime=comofunciona">Como funciona</a></li>
-						<li><a href="https://bitproedu.com.br/professor/">Professor</a></li>
-						<li><a href="https://bitproedu.com.br/escola/">Escola</a></li>
-						<li><a href="https://bitproedu.com.br/blog/">Blog</a></li>
-						<li><a href="javascript:;" onclick="anime('contato');">Contato</a></li>
-					</ul>
+			<div id="redes-telefone" class="col-3 d-flex align-items-center justify-content-between pr-0">
+				<a href="tel:(62) 3586-5656"><b>(62) 3586-5656</b></a>
+				<a href="https://facebook.com/"><img src="img/fb.png" width="20" alt="Facebook"></a>
+				<a href="https://instagram.com/"><img src="img/ig.png" width="20" alt="Instagram"></a>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="container-fluid pt-4 pb-4" id="menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-6 pl-0">
+				<img src="img/logo.png" width="250" alt="Graus">
+			</div>
+			<div class="col-6 d-flex align-items-center justify-content-between pr-0 color-blue2">
+				<a href="javascript:;" onclick="anime('empresa');">EMPRESA</a>
+				<a href="javascript:;" onclick="anime('autorizadas');">PARCERIA</a>
+				<a href="javascript:;" onclick="anime('servicos');">SERVIÇOS</a>
+				<a href="javascript:;" onclick="anime('contato');">CONTATO</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="container-fluid h-100 p-0">
+	<img src="img/slide1.jpg" class="w-100">
+</section>
+
+<section class="container-fluid bg-blue2" id="fale">
+	<div class="container">
+		<div class="row">
+			<div class="col-6">
+				<img src="img/mulher.png" height="704" alt="">
+			</div>
+			<div class="col-6 d-flex flex-column justify-content-center">
+				<h1 style="font-weight: 900;" class="mb-4 text-uppercase">
+					Nós cuidamos tão bem dos refrigeradores <span style="font-weight: 500">quanto você cuida do caixa. </span>
+				</h1>
+				<p class="mb-4">
+					Oferecer o atendimento que você precisa, no prazo que o seu negócio exige é o nosso trabalho há quase duas décadas. Conheça nossa empresa e descubra como manter seus produtos resfriados sem esquentar a cabeça.  
+				</p>
+				<button class="btn bg-blue1" onclick="anime('contato');" style="font-weight: 900">FALE COM A GENTE</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="container-fluid bg-blue1 pt-5 pb-5" id="empresa">
+	<div class="container">
+		<div class="row">
+			<div class="col-6 d-flex align-items-center">
+				<h1 style="font-weight: 500;" class="text-uppercase">
+					<span style="font-weight: 900">Uma empresa especialista em refrigeração</span> e em superação de expectativas.
+				</h1>
+			</div>
+			<div class="col-5 d-flex flex-column justify-content-center text-justify">
+				<p>A Graus surgiu de um conhecimento profundo do mercado de refrigeração em Goiás. Há 19 anos, somos comprometidos em fazer mais, melhor e em menos tempo. Nossos serviços são realizados no local, sem a necessidadede remover seu equipamento do PDV.</p>
+
+				<p>Outro compromisso que é nossa marca registrada é cuidar da apresentação dos seus equipamentos. Temos peças originais e cuidamos para que seus aparelhos tenham aparência perfeita, o que, para o seu consumidor final, significa cuidado, asseio e confiabilidade.</p>
+
+				<p>Bem, a gente tem muito a dizer, mas prefere que você ligue,  experimente os nossos serviços e descubra por que somos referência no mercado.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="container-fluid pt-5 pb-5" id="autorizadas">
+	<div class="container">
+		<div class="row">
+			<div class="w-100">
+				<h1 style="font-weight: 900;" class="mb-4 color-blue2 text-center text-uppercase">Somos autorizada das principais <br>marcas do mercado</h1>
+				<div class="w-100 d-flex justify-content-between">
+					<img src="img/artico.png" height="150" align="Artico">
+					<img src="img/fricon.png" height="150" align="Fricon">
+					<img src="img/imbera.png" height="150" align="Imbera">
+					<img src="img/aht.png" height="150" align="AHT">
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
 
-	<section class="container-fluid mx-auto p-0 mt-5" id="principal">
-		<div class="container">
-			<div class="row mt-5">
-				<div class="col-6 offset-md-5 mt-5 pt-5">
-					<h1 class="mt-5 pt-5"><span class="bg-yellow color-blue" style="background-clip: content-box;">A plataforma que conecta você às melhores oportunidades.</span></h1>
-				</div>
+<section class="container-fluid bg-blue2 pt-5 pb-5" id="servicos">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 mx-auto">
+				<h1 style="font-weight: 900" class="color-blue1 text-center mb-4">
+					NOSSOS SERVIÇOS
+				</h1>
+				<p class="text-center text-uppercase">Nosso objetivo é que você não tenha problemas, nosso compromisso é resolvê-los rapidamente.</p>
 			</div>
 		</div>
-	</section>
-	
-	<section class="container-fluid mx-auto p-0" id="alavancar">
-		<div class="row m-0">
-			<div class="col-6 d-flex flex-column align-items-center justify-content-center">
-				<div class="col-5 offset-md-5">
-					<h1 class="color-blue">A Bitpro vai alavancar sua carreira.</h1>
-					<h5 class="color-blue mt-5 font-weight-normal text-justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Temos vagas em todo o Brasil e encaminharemos você para elas. Com o processo seletivo, traçamos o seu perfil e conectamos você as melhores escolas.</h5>
-				</div>
-			</div>
-			<div class="col-6" style="background-image: url('img/estampa.png'); background-size: cover">
-
-			</div>
+		<div class="row mt-5">
+		  <div class="col-4">
+		    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+		      <a class="nav-link active" id="a-tab" data-toggle="pill" href="#a" role="tab" aria-controls="a" aria-selected="true">Manutenção Preventiva <i class="fas fa-chevron-right"></i></a>
+		      <a class="nav-link" id="b-tab" data-toggle="pill" href="#b" role="tab" aria-controls="b" aria-selected="false">Manutenção Corretiva <i class="fas fa-chevron-right"></i></a>
+		      <a class="nav-link" id="c-tab" data-toggle="pill" href="#c" role="tab" aria-controls="c" aria-selected="false">Instalação <i class="fas fa-chevron-right"></i></a>
+		      <a class="nav-link" id="d-tab" data-toggle="pill" href="#d" role="tab" aria-controls="d" aria-selected="false">Fast Service <i class="fas fa-chevron-right"></i></a>
+		      <a class="nav-link" id="d-tab" data-toggle="pill" href="#d" role="tab" aria-controls="d" aria-selected="false">Movimentação <i class="fas fa-chevron-right"></i></a>
+		    </div>
+		  </div>
+		  <div class="col-8">
+		    <div class="tab-content" id="v-pills-tabContent">
+		      <div class="tab-pane fade show active" id="a" role="tabpanel" aria-labelledby="a-tab">
+		      	<div class="d-flex align-items-center mb-4">
+		      		<img src="img/a.png" width="50" alt="">
+		      		<h4 style="font-weight: 900" class="mb-0 ml-3 text-uppercase">Manutenção Preventiva</h4>
+		      	</div>
+				<p>Obedece um cronograma estabelecido pelo fabricante. Um profissional com treinamento específico analisa itens críticos em cada fase da vida útil. O objetivo é manter a eficiência, a estética e até preservar o valor do equipamento. Os serviços são feitos no local, diminuindo o tempo de execução e não interferindo no funcionamento do seu negócio.</p>
+		      </div>
+		      <div class="tab-pane fade" id="b" role="tabpanel" aria-labelledby="b-tab">
+		      	<div class="d-flex align-items-center mb-4">
+		      		<img src="img/a.png" width="50" alt="">
+		      		<h4 style="font-weight: 900" class="mb-0 ml-3 text-uppercase">Manutenção Preventiva</h4>
+		      	</div>
+				<p>Obedece um cronograma estabelecido pelo fabricante. Um profissional com treinamento específico analisa itens críticos em cada fase da vida útil. O objetivo é manter a eficiência, a estética e até preservar o valor do equipamento. Os serviços são feitos no local, diminuindo o tempo de execução e não interferindo no funcionamento do seu negócio.</p>
+		      </div>
+		      <div class="tab-pane fade" id="c" role="tabpanel" aria-labelledby="c-tab">
+		      	<div class="d-flex align-items-center mb-4">
+		      		<img src="img/a.png" width="50" alt="">
+		      		<h4 style="font-weight: 900" class="mb-0 ml-3 text-uppercase">Manutenção Preventiva</h4>
+		      	</div>
+				<p>Obedece um cronograma estabelecido pelo fabricante. Um profissional com treinamento específico analisa itens críticos em cada fase da vida útil. O objetivo é manter a eficiência, a estética e até preservar o valor do equipamento. Os serviços são feitos no local, diminuindo o tempo de execução e não interferindo no funcionamento do seu negócio.</p>
+		      </div>
+		      <div class="tab-pane fade" id="d" role="tabpanel" aria-labelledby="d-tab">
+		      	<div class="d-flex align-items-center mb-4">
+		      		<img src="img/a.png" width="50" alt="">
+		      		<h4 style="font-weight: 900" class="mb-0 ml-3 text-uppercase">Manutenção Preventiva</h4>
+		      	</div>
+				<p>Obedece um cronograma estabelecido pelo fabricante. Um profissional com treinamento específico analisa itens críticos em cada fase da vida útil. O objetivo é manter a eficiência, a estética e até preservar o valor do equipamento. Os serviços são feitos no local, diminuindo o tempo de execução e não interferindo no funcionamento do seu negócio.</p>
+		      </div>
+		    </div>
+		  </div>
 		</div>
-	</section>
+	</div>
+</section>
 
-	<!-- VANTAGENS INICIO -->
-	<section class="container-fluid mx-auto p-0 pt-5 pb-5 bg-yellow color-blue" id="vantagens">
-		<div class="container pt-4 pb-4">
-			<div class="row mx-auto mb-4">
-				<div class="col-9 mx-auto">
-					<h1 style="font-size: 4rem; text-align: center;">
-						<span style="background-clip: content-box; background-color: white">Vantagens</span> de ser Bitpro.
-					</h1>
-				</div>
-			</div>
-			<div class="row mx-auto mt-5">
-				<div class="col-10 mx-auto">
-					<div class="row">
-						<div class="col-6">
-							<div class="d-flex align-items-center">
-								<div class="pr-2">
-									<img src="img/v1.png"  width="80px" alt="">
+<section class="container-fluid pt-5 pb-5" id="c-form">
+	<div class="container">
+		<div class="row">
+			<div class="col-8 mx-auto" id="contato">
+				<h2 class="color-blue2 text-center mb-5" style="font-weight: 900">FALE CONOSCO</h2>
+				<div id="d-form">
+					<form action="" method="post" id="form" autocomplete="off">
+						<div class="row">
+							<div class="col-6">
+								<div class="form-group">
+									<input class="form-control" type="text" name="empresa" required="required" id="fempresa" placeholder="Empresa" />
 								</div>
-								<div>
-									<p class="mb-0">Acesso a vagas exclusivas.</p>
+								<div class="form-group">
+									<input class="form-control" type="text" name="email" required="required" id="email" placeholder="E-mail" />
+								</div>
+								<div class="form-group">
+									<input class="form-control" required="required" type="text" name="telefone" id="telefone" placeholder="Telefone" />
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="text" name="cidade" required="required" id="cidade" placeholder="Cidade" />
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="form-group h-100">
+									<textarea class="form-control" style="height: 92%" name="mensagem" required="required" id="mensagem" placeholder="Mensagem"></textarea>
 								</div>
 							</div>
 						</div>
-						<div class="col-6">
-							<div class="d-flex  align-items-center">
-								<div class="pr-2">
-									<img src="img/v3.png"  width="80px" alt="">
-								</div>
-								<div>
-									<p class="mb-0">Processo seletivo<br> simples.</p>
-								</div>
+						<div class="row mt-2">
+							<div class="col-12 d-flex justify-content-center">
+								<input type="submit" value="SOLICITAR CONTATO" class="btn bg-blue2" style="font-weight: 900">
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row mx-auto">
-				<div class="col-10 mx-auto mt-3">
-					<div class="row">
-						<div class="col-6">
-							<div class="d-flex align-items-center">
-								<div class="pr-2">
-									<img src="img/v2.png"  width="80px" alt="">
-								</div>
-								<div>
-									<p class="mb-0">Oportunidades em todo o Brasil.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-6">
-							<div class="d-flex align-items-center">
-								<div class="pr-2">
-									<img src="img/v4.png"  width="80px" alt="">
-								</div>
-								<div>
-									<p class="mb-0">Melhores oportunidades de trabalho, sem necessidade de indicação.</p>
-								</div>
-							</div>
-						</div>
-					</div>
+					</form>
 				</div>
 			</div>
 		</div>
-	</section>
-	<!-- VANTAGENS FIM -->
+	</div>
+</section>
 
-	<section class="container-fluid p-0 pt-5 pb-5 color-white" id="processo">
-		<div class="container pt-2 pb-2">
-			<div class="row">
-				<div class="col-8 mx-auto">
-					<h1>
-						Entenda nosso <span style="border-bottom: 2px solid #fdd000">processo</span> seletivo.
-					</h1>
-					<h5 class="mt-4 mb-4 font-weight-normal">A Bitpro entende que, além do seu domínio da disciplina, importa também a sua capacidade de conquistar a turma, de se comunicar com ela e de explicar a matéria com simplicidade e eficiência, além, logicamente, de ter uma ótima postura profissional.</h5>
-				</div>
+<section class="container-fluid p-0">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15290.473454588657!2d-49.2985591!3d-16.6459119!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbcdfa9625db2e516!2zR1JBVVMgU09MVcOHw5VFUyBFTSBSRUZSSUdFUkHDh8ODTw!5e0!3m2!1spt-BR!2sbr!4v1575475481188!5m2!1spt-BR!2sbr" height="450" frameborder="0" style="border:0; width: 100%" allowfullscreen=""></iframe>
+</section>
+
+<section class="container-fluid color-blue2 pt-5 pb-5" id="rodape">
+	<div class="container">
+		<div class="row">
+			<div class="col-6">
+				<h2 class="text-uppercase mb-5" style="font-weight: 900">onde <span style="border-bottom: 3px solid #bfdce6">estamos</span></h2>
+				<p>
+					Graus Comércio e Serviços LTDA – ME<br>
+					CNPJ 04.180.940/0001-60
+				</p>
+				<p>
+					Graus Comércio e Serviços LTDA – ME<br>
+					CNPJ 04.180.940/0001-60<br>
+					Avenida Mato Grosso do Sul, 173<br>
+					Setor Perim, Goiânia – GO <br>
+					CEP 74580-150<br>
+					<span style="font-weight: 900">Fone: (62) 3586-5656</span><br>
+					E-mail: atendimento@graus.com.br 
+				</p>
 			</div>
-
-
-			<div class="row mt-4" id="processomobile">
-				<div class="col-12 mx-auto">
-					<div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" data-interval="false">
-					  <div class="carousel-inner">
-					    <div class="carousel-item active">
-					    	<div class="col-10 mx-auto">
-						    	<div class="row">
-						    		<div class="col-11 mx-auto">
-								    	<h5>
-								    		<span class="color-yellow">01.</span>
-								    		<br>
-								    		Faça seus cadastro.
-								    	</h5>
-							    	</div>
-						    	</div>
-					    	</div>
-					    </div>
-					    <div class="carousel-item">
-					    	<div class="col-10 mx-auto">
-						    	<div class="row">
-						    		<div class="col-11 mx-auto">
-								    	<h5>
-								    		<span class="color-yellow">02.</span>
-								    		<br>
-								    		Realize o pagamento da sua inscrição.
-								    	</h5>
-							    	</div>
-						    	</div>
-					    	</div>
-					    </div>
-					    <div class="carousel-item">
-					    	<div class="col-10 mx-auto">
-						    	<div class="row">
-						    		<div class="col-11 mx-auto">
-								    	<h5>
-								    		<span class="color-yellow">03.</span>
-								    		<br>
-								    		Envie seu currículo com informações básicas.
-								    	</h5>
-							    	</div>
-						    	</div>
-					    	</div>
-					    </div>
-					    <div class="carousel-item">
-					    	<div class="col-10 mx-auto">
-						    	<div class="row">
-						    		<div class="col-11 mx-auto">
-								    	<h5>
-								    		<span class="color-yellow">04.</span>
-								    		<br>
-								    		Faça as provas teórica, socioemocional e psicotécnica.
-								    	</h5>
-							    	</div>
-						    	</div>
-					    	</div>
-					    </div>
-					    <div class="carousel-item">
-					    	<div class="col-10 mx-auto">
-						    	<div class="row">
-						    		<div class="col-11 mx-auto">
-								    	<h5>
-								    		<span class="color-yellow">05.</span>
-								    		<br>
-								    		Grave uma aula por disciplina.
-								    	</h5>
-							    	</div>
-						    	</div>
-					    	</div>
-					    </div>
-					    <div class="carousel-item">
-					    	<div class="col-10 mx-auto">
-						    	<div class="row">
-						    		<div class="col-11 mx-auto">
-								    	<h5>
-								    		<span class="color-yellow">06.</span>
-								    		<br>
-								    		Recebe a classificação e feedback.
-								    	</h5>
-							    	</div>
-						    	</div>
-					    	</div>
-					    </div>
-					    <div class="carousel-item">
-					    	<div class="col-10 mx-auto">
-						    	<div class="row">
-						    		<div class="col-11 mx-auto">
-								    	<h5>
-								    		<span class="color-yellow">07.</span>
-								    		<br>
-								    		Recebe a classificação e feedback.
-								    	</h5>
-							    	</div>
-						    	</div>
-					    	</div>
-					    </div>
-					    <div class="carousel-item">
-					    	<div class="col-10 mx-auto">
-						    	<div class="row">
-						    		<div class="col-11 mx-auto">
-								    	<h5>
-								    		<span class="color-yellow">08.</span>
-								    		<br>
-								    		Se você for selecionado, faz o curso presencial.
-								    	</h5>
-							    	</div>
-						    	</div>
-					    	</div>
-					    </div>
-					  </div>
-					  <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
-					    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					    <span class="sr-only">Anterior</span>
-					  </a>
-					  <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
-					    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-					    <span class="sr-only">Próximo</span>
-					  </a>
-					</div>
-				</div>
-			</div>
-
-			<div class="row mt-4" id="processoweb">
-				<div class="col-12 mx-auto">
-					<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
-					  <div class="carousel-inner">
-					    <div class="carousel-item active">
-					    	<div class="col-10 mx-auto">
-						    	<div class="row">
-						    		<div class="col-3 mx-auto">
-								    	<h5>
-								    		<span class="color-yellow">01.</span>
-								    		<br>
-								    		Faça seus cadastro.
-								    	</h5>
-							    	</div>
-						    		<div class="col-3 mx-auto">
-								    	<h5>
-								    		<span class="color-yellow">02.</span>
-								    		<br>
-								    		Realize o pagamento da sua inscrição.
-								    	</h5>
-							    	</div>
-						    		<div class="col-3 mx-auto">
-								    	<h5>
-								    		<span class="color-yellow">03.</span>
-								    		<br>
-								    		Envie seu currículo com informações básicas.
-								    	</h5>
-							    	</div>
-						    		<div class="col-3 mx-auto">
-								    	<h5>
-								    		<span class="color-yellow">04.</span>
-								    		<br>
-								    		Faça as provas teórica, socioemocional e psicotécnica.
-								    	</h5>
-							    	</div>
-						    	</div>
-					    	</div>
-					    </div>
-					    <div class="carousel-item">
-					    	<div class="col-10 mx-auto">
-						    	<div class="row">
-						    		<div class="col-3 mx-auto">
-								    	<h5>
-								    		<span class="color-yellow">05.</span>
-								    		<br>
-								    		Grave uma aula por disciplina.
-								    	</h5>
-							    	</div>
-						    		<div class="col-3 mx-auto">
-								    	<h5>
-								    		<span class="color-yellow">06.</span>
-								    		<br>
-								    		Recebe a classificação e feedback.
-								    	</h5>
-							    	</div>
-						    		<div class="col-3 mx-auto">
-								    	<h5>
-								    		<span class="color-yellow">07.</span>
-								    		<br>
-								    		Recebe a classificação e feedback.
-								    	</h5>
-							    	</div>
-						    		<div class="col-3 mx-auto">
-								    	<h5>
-								    		<span class="color-yellow">08.</span>
-								    		<br>
-								    		Se você for selecionado, faz o curso presencial.
-								    	</h5>
-							    	</div>
-						    	</div>
-					    	</div>
-					    </div>
-					  </div>
-					  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-					    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					    <span class="sr-only">Anterior</span>
-					  </a>
-					  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-					    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-					    <span class="sr-only">Próximo</span>
-					  </a>
-					</div>
-				</div>
+			<div class="col-6">
+				Instagram aqui
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
 
-
-	<!-- valores INICIO -->
-	<section class="container-fluid mx-auto p-0" id="valores">
-		<div class="row m-0">
-			<div class="col-10 pt-5 pb-5 bg-blue2 color-white">
-				<div class="row offset-md-2 pt-2 pb-2 pl-5">
-					<div class="col-8">
-						<h1 class="mb-3">Valores da Inscrição</h1>
-						<h3><ul><li>Escolha seu pacote:</li></ul></h3>
-						<div class="row ml-1">
-							<div class="col-5">
-								<div class="bg-yellow color-blue p-2 pl-3 plano" onclick="location.href='https://app.bitproedu.com.br/criarconta/professor/1';">
-									<h1 class="mb-1">R$ 160,00</h1>
-									<h5 class="mb-0">1 DISCIPLINA</h5>
-								</div>
-							</div>
-							<div class="col-5">
-								<div class="bg-yellow color-blue p-2 pl-3 plano" onclick="location.href='https://app.bitproedu.com.br/criarconta/professor/1';">
-									<h1 class="mb-1">R$ 240,00</h1>
-									<h5 class="mb-0">2 DISCIPLINAS</h5>
-								</div>
-							</div>
-						</div>
-
-						<h3 class="mt-4"><ul><li>Aguarde o e-mail de comprovação para acessar a plataforma.</li></ul></h3>
-						<h3 class="mt-4"><ul><li>Acesse a plataforma e participe do processo seletivo.</li></ul></h3>
-
-						<p class="color-blue text-justify mt-5">O pagamento pode ser feito direto no cartão de crédito, que libera a inscrição na hora, ou pelo boleto enviado no seu e-mail. Nessa opção, a sua inscrição só será efetivada quando o banco confirmar o pagamento, o que pode levar alguns dias úteis.</p>
-					</div>
-				</div>
+<section class="container-fluid color-blue2 pt-3 pb-3" id="footer" style="background-color: #ececed">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 d-flex justify-content-between align-items-center">
+				<div>2019 © Graus Comércio e Serviços - Desenvolvido por Studio Que</div>
+				<a href="http://studioque.com.br" target="_blank"><img src="img/studioque.png" width="150" alt="StudioQUE"></a>
 			</div>
 		</div>
-	</section>
-	<!-- valores FIM -->
+	</div>
+</section>
 
-
-	<style type="text/css">
-		label{color: inherit;}
-		input[type=submit]{
-			background-color: #fdd000;
-			border-color: #fdd000;
-			color: #001e6a;
-			border-radius: 25px
-		}
-		.form-control{color:white;}
-	</style>
-
-	<!-- COMO FORMULARIO INICIO -->
-	<section class="container-fluid mx-auto p-0 bg-blue pt-5 pb-5" id="contato">
-		<div class="row m-0 pt-3 pb-3">
-			<div class="col-6 mx-auto">
-				<div class="row mx-auto d-flex align-items-center">
-					<div class="col-6">
-						<h1>
-							<span class="font-weight-normal">Agora que você entendeu como funciona,</span> inscreva-se e faça parte da Bitpro.
-						</h1>
-					</div>
-					<div class="col-6 pl-5">
-						<form action="" id="form" method="post" autocomplete="off">
-							<div class="form-group">
-								<label>Nome</label>
-								<input type="text" class="form-control" name="nome" id="nome">
-							</div>
-							
-							<div class="form-group">
-								<label>E-mail</label>
-								<input type="text" class="form-control" name="email" id="email">
-							</div>
-							
-							<div class="form-group">
-								<label>Telefone</label>
-								<input type="text" class="form-control" name="telefone" id="telefone">
-							</div>
-							
-							<div class="form-group">
-								<label for="">Estado:</label>
-								<select class="form-control" name="estado" id="estado">
-									<option value="0">Selecione</option>
-									<option value="AC">Acre</option>
-									<option value="AL">Alagoas</option>
-									<option value="AP">Amapá</option>
-									<option value="AM">Amazonas</option>
-									<option value="BA">Bahia</option>
-									<option value="CE">Ceará</option>
-									<option value="DF">Distrito Federal</option>
-									<option value="ES">Espírito Santo</option>
-									<option value="GO">Goiás</option>
-									<option value="MA">Maranhão</option>
-									<option value="MT">Mato Grosso</option>
-									<option value="MS">Mato Grosso do Sul</option>
-									<option value="MG">Minas Gerais</option>
-									<option value="PA">Pará</option>
-									<option value="PB">Paraíba</option>
-									<option value="PR">Paraná</option>
-									<option value="PE">Pernambuco</option>
-									<option value="PI">Piauí</option>
-									<option value="RJ">Rio de Janeiro</option>
-									<option value="RN">Rio Grande do Norte</option>
-									<option value="RS">Rio Grande do Sul</option>
-									<option value="RO">Rondônia</option>
-									<option value="RR">Roraima</option>
-									<option value="SC">Santa Catarina</option>
-									<option value="SP">São Paulo</option>
-									<option value="SE">Sergipe</option>
-									<option value="TO">Tocantins</option>
-								</select>
-							</div>
-							
-							<div class="form-group">
-								<label>Cidade</label>
-								<input type="text" class="form-control" name="cidade" id="cidade">
-							</div>
-							<input type="submit" value="ENVIAR" class="btn btn-primary btn-lg">
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- COMO FORMULARIO FIM -->
-
-	<section class="container-fluid p-0 mx-auto" style="background-color:#ededee; color: #455a90">
-		<div class="container pl-5 pr-5 pt-4 pb-4 d-flex justify-content-between" id="rodape">
-			<span>2019 © BITPRO - Desenvolvido por Studio Que</span>
-			<a href="http://studioque.com.br" target="_blank"><img src="img/studioque.png" width="100" alt="StudioQUE"></a>
-		</div>
-	</section>
-
-	<p id="aguarde" class="fixed-top hide justify-content-center align-items-center w-100">
-		<span></span>
-	</p>
+<p id="aguarde" class="fixed-top hide justify-content-center align-items-center w-100">
+	<span></span>
+</p>
 
 <script type="text/javascript">
-
 function anime($id){
     $('html,body').animate({
         scrollTop: $("#"+$id).offset().top - 90
@@ -500,20 +333,20 @@ function toggleAlerta(){
 	}
 }
 
+
 $('#form').on('submit', function(e){
 	e.preventDefault();
 	toggleAlerta();
-	var nome = $('#nome').val(),
+
+	var empresa = $('#fempresa').val(),
 		email = $('#email').val(),
 		telefone = $('#telefone').val(),
 		cidade = $('#cidade').val(),
-		estado = $('#estado').val(),
-		area = 'professor',
-		origem = '<?php echo $url_atual;?>',
+		mensagem = $('#mensagem').val(),
 		ajaxResponse = $("#form"),
-		divForm = $("#div-form");
+		divForm = $("#d-form");
 
-	if(nome === '' || email === '' || telefone === '' || area === '' || cidade === '' || estado === ''){
+	if(empresa === '' || email === '' || telefone === '' || cidade === '' || mensagem === ''){
 		toggleAlerta();
 		alert('Por favor, preencha todas as informações.');
 		return false;
@@ -522,22 +355,22 @@ $('#form').on('submit', function(e){
 	$.ajax({
 		type: 'post',
 		dataType: 'html',
-		url: 'func/submit.php',
+		url: 'func/send.php',
 		async: false,
 		data: {
 			action: "submit",
-			nome: nome,
-			email: email,
-			telefone: telefone,
-			origem: origem,
-			area: area,
-			cidade: cidade,
-			estado: estado
+			empresa:empresa,
+			email:email,
+			telefone:telefone,
+			cidade:cidade,
+			mensagem:mensagem
 		},
 		success: function(response){
 			toggleAlerta();
-			ajaxResponse.html(response);
-			divForm.addClass('d-flex').addClass('justify-content-center').addClass('align-items-center');
+			if(response === '1'){
+				ajaxResponse.html('Obrigado por entrar em contato.');
+				divForm.addClass('d-flex').addClass('justify-content-center').addClass('align-items-center');
+			}
 		},
 		error: function(response){
 			toggleAlerta();
@@ -547,6 +380,6 @@ $('#form').on('submit', function(e){
 	});
 });
 </script>
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 </body>
 </html>
