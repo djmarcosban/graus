@@ -1,7 +1,6 @@
 <?php
 @$url_atual = "http" . (isset($_SERVER[HTTPS]) ? (($_SERVER[HTTPS]=="on") ? "s" : "") : "") . "://" . "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +15,7 @@
 	<script type="text/javascript" src="js/popper.min.js"></script>
 </head>
 <body <?php if(isset($_GET['anime'])){echo 'onload="anime(\''.$_GET['anime'].'\')"';}?>>
-	
+
 <section class="container-fluid bg-blue1 pt-1 pb-1">
 	<div class="container">
 		<div class="row d-flex justify-content-between align-items-center">
