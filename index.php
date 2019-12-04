@@ -5,6 +5,7 @@
 <html>
 <head>
 	<title>Graus</title>
+	<base href="https://graus.com.br/web/">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -20,9 +21,8 @@
 	<div class="container">
 		<div class="row d-flex justify-content-between align-items-center">
 			<div id="menu-topo" class="col-3 pl-0 d-flex align-items-center justify-content-between">
-					<a href="javascript:;" onclick="anime('contato');">Cadastre-se</a>
-					<a href="javascript:;" onclick="anime('contato');">Fale conosco</a>
-				</ul>
+				<a href="javascript:;" onclick="anime('contato');">Cadastre-se</a>
+				<a href="javascript:;" onclick="anime('contato');">Fale conosco</a>
 			</div>
 			<div id="redes-telefone" class="col-3 d-flex align-items-center justify-content-between pr-0">
 				<a href="tel:(62) 3586-5656"><b>(62) 3586-5656</b></a>
