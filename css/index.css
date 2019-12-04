@@ -1,0 +1,250 @@
+body{font-family: 'Roboto', sans-serif!important;}
+.bg-yellow{background-color: #fdd000}
+.bg-blue{background-color: #005ca8; color: white}
+.bg-blue2{background-color: #17a3ba; color: white}
+.bg-white{background-color: #fff; color: #001e6a}
+#saibamais{border-color: white; border-radius: 30px}
+a#saibamais:hover{background-color:#23a4bc!important; border-color: #23a4bc; color: #fff}
+.color-blue{color: #001e6a}
+.color-white{color: #ffffff}
+.color-yellow{color: #fdd000}
+.color-red{color: red}
+.msg-success {
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+.plano{cursor: pointer!important;}
+.plano:hover{background-color:white; transition-duration: .2s}
+#redessociais a{color: white;}
+#redessociais a:hover{color: white; text-decoration: underline;}
+
+#menu{list-style: none}
+#menu > li > a{color: white; text-decoration: none;}
+#menu > li > a:hover{color: white; text-decoration: underline;}
+
+#parceiro {
+	background-image: url('../img/bg_parceiro.jpg');
+	background-position: top;
+}
+
+#aguarde{background-color: rgb(0, 36, 105, 0.9); color:rgb(241, 207, 0); height: 100vh}
+#aguarde > span{font-size: 2em; font-weight: bold}
+#aguarde > span::after{content:'Aguarde...';}
+
+.hide{display: none;}
+.show{display: block;}
+
+#professores {
+	background-image: url('../img/faixa_professores.png');
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+
+#div-form{background-color: #fdd000}
+
+#rodape{
+	background-image: url('../img/bg_rodape.jpg');
+	background-position: center;
+}
+
+@media(max-width: 1024px){
+	body{font-size: 1.1em}
+	#coruja, #estampas, #col_sec_2{display: none!important}
+	#txt_somos{max-width: 100%!important; flex:0 0 100%!important}
+	#div-form {
+		margin: 0 !important;
+		padding: 1rem 2rem !important;
+		max-width: 100% !important;
+		flex: 0 0 100%;
+	}
+	#div-form > #form > div > .col-9{flex: 0 0 70%!important; max-width: 70%!important}
+
+	#txt_sec_2 {
+		margin: 0 !important;
+		max-width: 100% !important;
+		flex: 0 0 100%;
+	}
+	#container_somos{padding-top: 2rem!important; padding-bottom: 2rem!important}
+	#c_somos{padding-bottom: 0!important; max-width: 100%!important}
+	#row_sec_2{padding: 0 !important}
+
+	#btn {
+		width: 100%!important;
+		padding: 15px!important;
+	}
+
+	#p_container{padding-top: 2rem!important; padding-bottom: 2rem!important}
+	#p_container > .row > .col-6{width: 100%!important; max-width: 100%!important; flex: 0 0 100%!important}
+	#p_container > .row > .col-4{width: 100%!important; max-width: 100%!important; flex: 0 0 100%!important}
+	#p_container > .row > .col-8{display: none!important}
+	#professores{background: none;}
+
+	/*.container-fluid{padding-left: 0!important; padding-right: 0!important}*/
+
+	h1,h2 {
+		font-size: 1.7rem;
+		line-height: 1.1;
+	}
+
+	/*#rodape{padding: 0!important;}*/
+	#rodape > .container > .row > a{width:100%; flex: 0 0 100%; max-width: 100%; margin-bottom: 10px; margin-top: 10px}
+
+}
+
+	@media(max-width: 1250px){
+		#logo{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 20px
+		}
+		#menu {
+			max-width: 100% !important;
+			flex: 0 0 100% !important;
+			flex-flow: wrap;
+			padding: 0 !important;
+		}
+
+		#principal{
+			background-size: cover;
+			height: auto!important;
+		}
+		#principal > .container > .row > .col-6{
+			padding-top: 0 !important;
+			margin-top: 0 !important;
+			max-width: 60%;
+			flex: 0 0 60%;
+		}
+		#principal > .container > .row > .col-6 > h1{font-size: 1.6rem!important;}
+
+		#alavancar {
+			padding-top: 25px !important;
+			padding-bottom: 25px !important;
+		}
+
+		#alavancar > .row{
+			min-height: inherit!important;
+		}
+		#alavancar > .row > .col-6, #alavancar > .row > .col-6 > .col-5{
+			max-width: 100%!important;
+			flex: 0 0 100%!important;
+			background:none!important;
+		}
+		#alavancar > .row > .col-6, #alavancar > .row > .col-6 > .col-5 > h1{
+			text-align: center;
+		}
+
+		#vantagens > .container > .row > .col-9, #vantagens > .container > .row > .col-10{
+			max-width: 100%!important;
+			flex: 0 0 100%!important;
+		}
+
+		#vantagens > .container > .row > .col-9 > h1{
+			font-size:1.7rem!important;
+		}
+
+		#vantagens > .container > .row > .col-10 > .row > .col-6 > div{
+			flex-direction: column!important;
+
+		}
+
+		#vantagens > .container > .row > .col-10 > .row > .col-6 > div > div > p{
+			text-align: center!important;
+			margin-top: 5px
+		}
+
+		#processo > .container > .row > .col-8{
+			max-width: 100%!important;
+			flex: 0 0 100%!important;
+		}
+		#processo > .container > .row > .col-8 > h1{
+			font-size:1.7rem!important;
+		}
+		#processo > .container > .row > .col-8 > h5{
+			text-align: justify;
+		}
+
+		#processomobile{display: block!important;}
+		#processoweb{display: none!important;}
+
+		#valores > .row > .col-10 > .row > .col-8 > h1{font-size: 1.7em!important; text-align: center;}
+		#valores > .row > .col-10 > .row > .col-8 > h3{font-size: 1.15em!important}
+		#valores > .row > .col-10, #valores > .row > .col-10 > .row > .col-8{
+			max-width: 100%!important;
+			flex: 0 0 100%!important;
+		}
+		#valores > .row > .col-10 > .row{
+			padding: 0!important;
+			margin-left: -15px!important
+		}
+
+		#valores > .row > .col-10 > .row > .col-8 > .row{margin-left: -15px!important}
+		#valores > .row > .col-10 > .row > .col-8 > .row > .col-5{
+			max-width: 100%!important;
+			flex: 0 0 100%!important;
+			margin-bottom: 20px
+		}
+		#valores > .row > .col-10 > .row > .col-8 > .row > .col-5 > div > h1,
+		#valores > .row > .col-10 > .row > .col-8 > .row > .col-5 > div > h5{
+			text-align: center!important;
+		}
+		#valores > .row > .col-10{border-bottom-right-radius:inherit!important;}
+
+		#contato > .row > .col-6, #contato > .row > .col-6 > .row > .col-6{
+			max-width: 100%!important;
+			flex: 0 0 100%!important;
+		}
+		
+		#contato > .row > .col-6 > .row > .col-6 > h1{margin-bottom: 20px}
+		
+		#contato > .row > .col-6, #contato > .row > .col-6 > .row > .pl-5{
+			padding-left: 15px!important
+		}
+
+		#form > .btn{width: 100%}
+
+		#contato > .row > .col-6 > .row{flex-direction: column;}
+
+		#rodape{
+			flex-direction: column;
+			align-items: center;
+			padding-left: 0!important;
+			padding-right: 0!important;
+			font-size: 1rem!important
+		}
+		#rodape > a{margin-top: 10px}
+
+		#bg-menu{border-bottom-left-radius: inherit!important;}
+
+		.offset-md-1, .offset-md-2, .offset-md-3, .offset-md-4, .offset-md-5, .offset-md-5{margin-left: inherit!important}
+
+	}
+	#principal {
+		background-image: url('../img/banner-bg.jpg');
+		height: 770px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	#vantagens > .container > .row > .col-9 > h1{
+		font-size: 4rem; text-align: center;
+	}
+	
+	#processo > .container > .row > .col-8 > h1{
+		font-size: 3.5rem;
+	}
+
+	#alavancar > .row{
+		min-height: 90vh;
+	}
+
+	#processo{background-color: #001e6a}
+	#processoweb{display: block;}
+	#processomobile{display: none;}
+
+	#valores > .row > .col-10 > .row > .col-8 > h1{font-size: 3.5em}
+	#valores > .row > .col-10{border-bottom-right-radius:200px;}
+
+	#bg-menu{border-bottom-left-radius: 30px}
