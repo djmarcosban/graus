@@ -49,12 +49,8 @@ a.nav-link{display: flex; justify-content: space-between; align-items: center; f
 	#footer > .container > .row > div > div{margin-bottom: 20px}
 }
 @media(max-width: 768px){
-	#menu > .container > .row > div > img{width: 30%}
+	#menu > .container > .row > div > img{width: inherit;}
 }
-@media(max-width: 768px){
-	#menu > .container > .row > div > img{width: 60%}
-}
-
 #aguarde{background-color: rgb(60, 69, 94, 0.9); color:#fff; height: 100vh; z-index: 9999}
 #aguarde > span{font-size: 2em; font-weight: bold}
 #aguarde > span::after{content:'Aguarde...';}
