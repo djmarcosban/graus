@@ -553,9 +553,9 @@ div.preheader {
       $mail->Port = 465;                                    // TCP port to connect to
 
       //Recipients
-      $mail->setFrom('grausrobot@gmail.com', 'Graus');
+      $mail->setFrom('robot@graus.com.br', 'Graus');
       $mail->addAddress('djmarcosban@hotmail.com');     // Add a recipient
-      $mail->addReplyTo('grausrobot@gmail.com', 'Graus');
+      $mail->addReplyTo('robot@graus.com.br', 'Graus');
 
       //Content
       $mail->isHTML(true);                                  // Set email format to HTML
