@@ -335,7 +335,6 @@ $('#form').on('submit', function(e){
 			mensagem:mensagem
 		},
 		success: function(response){
-			console.log(response);
 			toggleAlerta();
 			if(response === '1'){
 				ajaxResponse.html('Obrigado por entrar em contato.');
