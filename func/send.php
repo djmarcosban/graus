@@ -544,6 +544,13 @@ div.preheader {
   try {
       //Server settings
       $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+      $mail->SMTPOptions = array(
+          'ssl' => array(
+              'verify_peer' => false,
+              'verify_peer_name' => false,
+              'allow_self_signed' => true
+          )
+      );
       $mail->isSMTP();                                      // Set mailer to use SMTP
       $mail->Host = 'tls://smtp.gmail.com:587';
       $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -570,7 +577,6 @@ div.preheader {
   }catch (Exception $e) {
       echo 0;
       echo 'Mailer Error: ' . $mail->ErrorInfo;
-      echo (extension_loaded('openssl')?'SSL loaded':'SSL not loaded')."\n";
   }
 
 }else{
