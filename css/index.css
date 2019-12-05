@@ -57,5 +57,5 @@ a.nav-link{display: flex; justify-content: space-between; align-items: center; f
 #aguarde{background-color: rgb(60, 69, 94, 0.9); color:#fff; height: 100vh; z-index: 9999}
 #aguarde > span{font-size: 2em; font-weight: bold}
 #aguarde > span::after{content:'Aguarde...';}
-.hide{display: none;}
+.hide{display: block;}
 .show{display: block;}
