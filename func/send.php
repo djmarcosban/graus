@@ -544,17 +544,10 @@ div.preheader {
   try {
       //Server settings
       $mail->SMTPDebug = 2;                                 // Enable verbose debug output
-      $mail->SMTPOptions = array(
-          'ssl' => array(
-              'verify_peer' => false,
-              'verify_peer_name' => false,
-              'allow_self_signed' => true
-          )
-      );
       $mail->isSMTP();                                      // Set mailer to use SMTP
-      $mail->Host = 'smtp.gmail.com';
+      $mail->Host = 'mail.graus.com.br';
       $mail->SMTPAuth = true;                               // Enable SMTP authentication
-      $mail->Username = "grausrobot@gmail.com";      // SMTP username
+      $mail->Username = "robot@graus.com.br";      // SMTP username
       $mail->Password = "Ma@rcos746";          // SMTP password
       $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
       $mail->Port = 465;                                    // TCP port to connect to
