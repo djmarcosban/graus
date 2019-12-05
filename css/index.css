@@ -59,4 +59,4 @@ a.nav-link{display: flex; justify-content: space-between; align-items: center; f
 #aguarde > span{font-size: 2em; font-weight: bold}
 #aguarde > span::after{content:'Aguarde...';}
 .hide{display: hide;}
-.show{display: block;}
+.show{display: flex;}
