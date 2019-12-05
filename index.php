@@ -99,10 +99,10 @@
 			<div class="w-100">
 				<h1 style="font-weight: 900;" class="mb-4 color-blue2 text-center text-uppercase">Somos autorizada das principais <br>marcas do mercado</h1>
 				<div class="w-100 d-flex justify-content-between">
-					<img src="img/artico.png" height="150" align="Artico">
-					<img src="img/fricon.png" height="150" align="Fricon">
-					<img src="img/imbera.png" height="150" align="Imbera">
-					<img src="img/aht.png" height="150" align="AHT">
+					<a href="https://www.artico.com.br/" target="_blank"><img src="img/artico.png" height="150" align="Artico"></a>
+					<a href="http://fricon.com.br/pt/" target="_blank"><img src="img/fricon.png" height="150" align="Fricon"></a>
+					<a href="https://www.imberacooling.com/brasil" target="_blank"><img src="img/imbera.png" height="150" align="Imbera"></a>
+					<a href="http://www.aht-brasil.com/" target="_blank"><img src="img/aht.png" height="150" align="AHT"></a>
 				</div>
 			</div>
 		</div>
