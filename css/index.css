@@ -26,7 +26,7 @@ a.nav-link{display: flex; justify-content: space-between; align-items: center; f
 	#menu > .container > .row{flex-direction: column; justify-content: center; align-items: center;}
 	#menu > .container > .row > div{max-width: 100%!important; flex:0 0 100%!important; padding: 0!important; display: flex; justify-content: center;}
 	#menu > .container > .row > div:first-child{margin-bottom: 25px}
-	#menu > .container > .row > div > img{width: 30%!important; height: auto!important}
+	#menu > .container > .row > div > img{width: 30%; height: auto!important}
 	#fale{padding-top: 15px; padding-bottom: 15px}
 	#fale > .container{padding:0!important;}
 	#fale > .container > .row{margin:0!important;}
