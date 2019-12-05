@@ -552,12 +552,12 @@ div.preheader {
           )
       );
       $mail->isSMTP();                                      // Set mailer to use SMTP
-      $mail->Host = 'tls://smtp.gmail.com:587';
+      $mail->Host = 'smtp.gmail.com';
       $mail->SMTPAuth = true;                               // Enable SMTP authentication
       $mail->Username = "grausrobot@gmail.com";      // SMTP username
       $mail->Password = "Ma@rcos746";          // SMTP password
-      $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-      $mail->Port = 587;                                    // TCP port to connect to
+      $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+      $mail->Port = 465;                                    // TCP port to connect to
 
       //Recipients
       $mail->setFrom('grausrobot@gmail.com', 'Graus');
