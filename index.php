@@ -304,7 +304,6 @@ function toggleAlerta(){
 $('#form').on('submit', function(e){
 	e.preventDefault();
 	toggleAlerta();
-
 	var empresa = $('#fempresa').val(),
 		email = $('#email').val(),
 		telefone = $('#telefone').val(),
@@ -338,6 +337,7 @@ $('#form').on('submit', function(e){
 			toggleAlerta();
 			if(response === '1'){
 				ajaxResponse.html('Obrigado por entrar em contato.');
+				alert('Obrigado por entrar em contato.');
 				divForm.addClass('d-flex').addClass('justify-content-center').addClass('align-items-center');
 			}
 		},
