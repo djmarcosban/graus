@@ -570,6 +570,7 @@ div.preheader {
   }catch (Exception $e) {
       echo 0;
       echo 'Mailer Error: ' . $mail->ErrorInfo;
+      echo phpinfo();
   }
 
 }else{
