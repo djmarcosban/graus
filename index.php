@@ -260,7 +260,7 @@
 	</div>
 </section>
 
-<p id="aguarde" class="fixed-top hide justify-content-center align-items-center w-100">
+<p id="aguarde" class="d-flex fixed-top hide justify-content-center align-items-center w-100">
 	<span></span>
 </p>
 
