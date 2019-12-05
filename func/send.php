@@ -545,12 +545,12 @@ div.preheader {
       //Server settings
       $mail->SMTPDebug = 2;                                 // Enable verbose debug output
       $mail->isSMTP();                                      // Set mailer to use SMTP
-      $mail->Host = 'smtp.gmail.com';                     // Specify main and backup SMTP servers
+      $mail->Host = 'ssl://smtp.gmail.com:465';
       $mail->SMTPAuth = true;                               // Enable SMTP authentication
       $mail->Username = "grausrobot@gmail.com";      // SMTP username
       $mail->Password = "Ma@rcos746";          // SMTP password
-      $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-      $mail->Port = 587;                                    // TCP port to connect to
+      $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+      $mail->Port = 465;                                    // TCP port to connect to
 
       //Recipients
       $mail->setFrom('grausrobot@gmail.com', 'Graus');
