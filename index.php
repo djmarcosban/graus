@@ -188,7 +188,7 @@
 									<input class="form-control" type="text" name="email" required="required" id="email" placeholder="E-mail" />
 								</div>
 								<div class="form-group">
-									<input class="form-control" required="required" type="text" name="telefone" id="telefone" placeholder="Telefone" />
+									<input class="form-control" required="required" type="text" name="telefone" id="telefone" placeholder="(DDD) Telefone" />
 								</div>
 								<div class="form-group">
 									<input class="form-control" type="text" name="cidade" required="required" id="cidade" placeholder="Cidade" />
