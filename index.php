@@ -11,13 +11,13 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+	<script type="text/javascript" src="js/jquery.mask.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 <body <?php if(isset($_GET['anime'])){echo 'onload="anime(\''.$_GET['anime'].'\')"';}?>>
-
 <section class="container-fluid bg-blue1 pt-1 pb-1">
 	<div class="container">
 		<div class="row d-flex justify-content-between align-items-center">
@@ -175,7 +175,7 @@
 <section class="container-fluid pt-5 pb-5" id="c-form">
 	<div class="container">
 		<div class="row">
-			<div class="col-8 mx-auto" id="contato">
+			<div class="col-9 mx-auto" id="contato">
 				<h2 class="color-blue2 text-center mb-5" style="font-weight: 900">FALE CONOSCO</h2>
 				<div id="d-form">
 					<form action="" method="post" id="form" autocomplete="off">
@@ -188,7 +188,14 @@
 									<input class="form-control" type="text" name="email" required="required" id="email" placeholder="E-mail" />
 								</div>
 								<div class="form-group">
-									<input class="form-control" required="required" type="text" name="telefone" id="telefone" placeholder="(DDD) Telefone" />
+									<div class="row">
+										<div class="col-3">
+											<input class="form-control" required="required" maxlength="2" type="text" name="ddd" id="ddd" placeholder="DDD" />
+										</div>
+										<div class="col-9">
+											<input class="form-control" required="required" type="text" name="telefone" id="telefone" placeholder="Telefone" />
+										</div>
+									</div>
 								</div>
 								<div class="form-group">
 									<input class="form-control" type="text" name="cidade" required="required" id="cidade" placeholder="Cidade" />
@@ -258,6 +265,24 @@
 </p>
 
 <script type="text/javascript">
+$(document).ready(function () { 
+    var telefone = $("#telefone"),
+    	ddd = $("#ddd");
+
+    ddd.on("change paste keyup", function() {
+    	if(ddd.val().length === 2){
+    		telefone.focus();
+    	}
+    });
+    telefone.on("change paste keyup", function() {
+    	if(telefone.val()[0] === '9'){
+    		telefone.mask('00000-0000');
+    	}else{
+    		telefone.mask('0000-0000');
+    	}
+	});
+});
+
 function anime($id){
     $('html,body').animate({
         scrollTop: $("#"+$id).offset().top - 90
@@ -283,6 +308,7 @@ $('#form').on('submit', function(e){
 	var empresa = $('#fempresa').val(),
 		email = $('#email').val(),
 		telefone = $('#telefone').val(),
+		ddd = $('#ddd').val(),
 		cidade = $('#cidade').val(),
 		mensagem = $('#mensagem').val(),
 		ajaxResponse = $("#form"),
@@ -303,6 +329,7 @@ $('#form').on('submit', function(e){
 			action: "submit",
 			empresa:empresa,
 			email:email,
+			ddd:ddd,
 			telefone:telefone,
 			cidade:cidade,
 			mensagem:mensagem
