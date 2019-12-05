@@ -39,7 +39,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-6 pl-0">
-				<img src="img/logo.png" width="250" alt="Graus">
+				<img src="img/logo.png" alt="Graus">
 			</div>
 			<div class="col-6 d-flex align-items-center justify-content-between pr-0 color-blue2">
 				<a href="javascript:;" onclick="anime('empresa');">EMPRESA</a>

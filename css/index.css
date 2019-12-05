@@ -17,6 +17,7 @@ a.nav-link{display: flex; justify-content: space-between; align-items: center; f
 .nav-pills .nav-link{background-color: #bfdce6; border-radius: 0; font-weight: 900; color: #3c445e; border-bottom: 1px solid #3c445e}
 .nav-pills .nav-link.active{background-color: white; color:#3c445e}
 #c-form{background-image: url('../img/bg-form.png'); }
+#menu > .container > .row > div > img{width: 250px; height: auto!important}
 @media(max-width: 1024px){
 	h1{line-height: initial!important; font-size: 1.4rem; text-align: center;}
 	p{font-size: 1rem; line-height:19px}
@@ -57,5 +58,5 @@ a.nav-link{display: flex; justify-content: space-between; align-items: center; f
 #aguarde{background-color: rgb(60, 69, 94, 0.9); color:#fff; height: 100vh; z-index: 9999}
 #aguarde > span{font-size: 2em; font-weight: bold}
 #aguarde > span::after{content:'Aguarde...';}
-.hide{display: block;}
+.hide{display: hide;}
 .show{display: block;}
