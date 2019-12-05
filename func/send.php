@@ -545,7 +545,7 @@ div.preheader {
       //Server settings
       $mail->SMTPDebug = 2;                                 // Enable verbose debug output
       $mail->isSMTP();                                      // Set mailer to use SMTP
-      $mail->Host = 'ssl://smtp.gmail.com:465';
+      $mail->Host = 'smtp.gmail.com';
       $mail->SMTPAuth = true;                               // Enable SMTP authentication
       $mail->Username = "grausrobot@gmail.com";      // SMTP username
       $mail->Password = "Ma@rcos746";          // SMTP password
@@ -570,7 +570,6 @@ div.preheader {
   }catch (Exception $e) {
       echo 0;
       echo 'Mailer Error: ' . $mail->ErrorInfo;
-      echo phpinfo();
   }
 
 }else{
