@@ -4,6 +4,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154111482-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-154111482-1');
+	</script>
 	<title>Graus</title>
 	<base href="https://graus.com.br/web/">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
