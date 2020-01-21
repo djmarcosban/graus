@@ -556,8 +556,8 @@ div.preheader {
 
       //Recipients
       $mail->setFrom('robot@graus.com.br', 'Graus');
-      $mail->addAddress('aureosan@hotmail.com');     // Add a recipient
-      //$mail->addAddress('robot@graus.com.br');     // Add a recipient
+      //$mail->addAddress('aureosan@hotmail.com');     // Add a recipient
+      $mail->addAddress('robot@graus.com.br');     // Add a recipient
       $mail->addReplyTo('robot@graus.com.br', 'Graus');
 
       //Content
