@@ -569,9 +569,11 @@ div.preheader {
       $mail->AltBody = '';
       
       if($mail->send()){
+        echo 'obrigado';
         header('Location: ../obrigado');
         exit;
       }else{
+        echo 'erro';
         header('Location: ../erro');
         exit;
       }
