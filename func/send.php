@@ -540,8 +540,6 @@ div.preheader {
 
   ';
 
-  echo $template;
-
   $subject = utf8_decode('Solicitação de contato');
 
   $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
@@ -569,17 +567,15 @@ div.preheader {
       $mail->AltBody = '';
       
       if($mail->send()){
-        echo 'obrigado';
-        header('Location: ../obrigado');
+        echo "<script>location.href='../obrigado';</script>";
         exit;
       }else{
-        echo 'erro';
-        header('Location: ../erro');
+        echo "<script>location.href='../erro';</script>";
         exit;
       }
 
   }catch (Exception $e) {
-      header('Location: ../erro');
+      echo "<script>location.href='../erro';</script>";
       exit;
       //echo 'Mailer Error: ' . $mail->ErrorInfo;
   }
