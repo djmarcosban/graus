@@ -540,6 +540,8 @@ div.preheader {
 
   ';
 
+  echo $template;
+
   $subject = utf8_decode('Solicitação de contato');
 
   $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
