@@ -187,7 +187,7 @@
 			<div class="col-9 mx-auto" id="contato">
 				<h2 class="color-blue2 text-center mb-5" style="font-weight: 900">FALE CONOSCO</h2>
 				<div id="d-form">
-					<form action="" method="post" id="form" autocomplete="off">
+					<form action="func/send.php" method="post" id="form">
 						<div class="row">
 							<div class="col-6">
 								<div class="form-group">
@@ -275,6 +275,17 @@
 
 <script type="text/javascript">
 $(document).ready(function () { 
+
+	<?php
+	if(isset($_GET['msg'])){
+		if($_GET['msg'] == 'obrigado'){
+			echo 'successForm();';
+		}elseif($_GET['msg'] == 'erro'){
+	echo 'errorForm();';
+		}
+	}
+	?>
+
     var telefone = $("#telefone"),
     	ddd = $("#ddd");
 
@@ -309,54 +320,20 @@ function toggleAlerta(){
 	}
 }
 
+function successForm(){
+	anime("form");
+	$("#form").html('Obrigado por entrar em contato.');
+	alert('Obrigado por entrar em contato.');
+	$("#form").addClass('d-flex').addClass('justify-content-center').addClass('align-items-center');
+}
 
-$('#form').on('submit', function(e){
-	e.preventDefault();
-	toggleAlerta();
-	var empresa = $('#fempresa').val(),
-		email = $('#email').val(),
-		telefone = $('#telefone').val(),
-		ddd = $('#ddd').val(),
-		cidade = $('#cidade').val(),
-		mensagem = $('#mensagem').val(),
-		ajaxResponse = $("#form"),
-		divForm = $("#d-form");
+function errorForm(){
+	anime("form");
+	$("#form").html('Houve um problema ao tentar enviar um email. Pedimos para que entre em contato através do número (62) 3586-5656.');
+	alert('Houve um problema ao tentar enviar um email. Pedimos para que entre em contato através do número (62) 3586-5656.');
+	$("#form").addClass('d-flex').addClass('justify-content-center').addClass('align-items-center');
+}
 
-	if(empresa === '' || email === '' || telefone === '' || cidade === '' || mensagem === ''){
-		toggleAlerta();
-		alert('Por favor, preencha todas as informações.');
-		return false;
-	}
-
-	$.ajax({
-		type: 'post',
-		dataType: 'html',
-		url: 'func/send.php',
-		async: false,
-		data: {
-			action: "submit",
-			empresa:empresa,
-			email:email,
-			ddd:ddd,
-			telefone:telefone,
-			cidade:cidade,
-			mensagem:mensagem
-		},
-		success: function(response){
-			toggleAlerta();
-			if(response === '1'){
-				ajaxResponse.html('Obrigado por entrar em contato.');
-				alert('Obrigado por entrar em contato.');
-				divForm.addClass('d-flex').addClass('justify-content-center').addClass('align-items-center');
-			}
-		},
-		error: function(response){
-			toggleAlerta();
-			ajaxResponse.html('Houve um erro ao tentar solicitar sua requisição. Por favor, atualize a página.');
-			divForm.addClass('d-flex').addClass('justify-content-center').addClass('align-items-center');
-		}
-	});
-});
 </script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 </body>

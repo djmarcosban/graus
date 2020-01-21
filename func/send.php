@@ -21,6 +21,8 @@ if(isset( $_POST['empresa'] ) && !empty( $_POST['empresa']) &&
   $ddd = filter_input(INPUT_POST, 'ddd', FILTER_SANITIZE_MAGIC_QUOTES);
   $data = date('d-m-Y H:i:s');
 
+  echo 'Aguarde...';
+
   $template = '
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!--[if IE]><html xmlns="http://www.w3.org/1999/xhtml" class="ie"><![endif]--><!--[if !IE]><!--><html style="margin: 0;padding: 0;" xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--><head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -543,7 +545,7 @@ div.preheader {
   $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
   try {
       //Server settings
-      $mail->SMTPDebug = 0;                                 // Enable verbose debug output
+      $mail->SMTPDebug = 2;                                 // Enable verbose debug output
       $mail->isSMTP();                                      // Set mailer to use SMTP
       $mail->Host = 'mail.graus.com.br';
       $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -564,11 +566,13 @@ div.preheader {
       $mail->AltBody = '';
       
       if($mail->send()){
-        echo 1;
+        header('Location: ../obrigado');
+        exit;
       }
 
   }catch (Exception $e) {
-      echo 0;
+      header('Location: ../erro');
+      exit;
       //echo 'Mailer Error: ' . $mail->ErrorInfo;
   }
 
