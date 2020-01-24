@@ -39,7 +39,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div id="redes-telefone" class="col-3 d-flex align-items-center justify-content-between pr-0">
 				<a href="tel:(62) 3586-5656"><b>(62) 3586-5656</b></a>
 				<a href="https://www.facebook.com/graussolucoes/"><img src="img/fb.png" width="20" alt="Facebook"></a>
-				<a href="https://instagram.com/graus_refrigeracao"><img src="img/ig.png" width="20" alt="Instagram"></a>
+				<a href="https://instagram.com/grausrefrigeracao"><img src="img/ig.png" width="20" alt="Instagram"></a>
 
 			</div>
 		</div>
@@ -94,7 +94,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</h1>
 			</div>
 			<div class="col-5 d-flex flex-column justify-content-center text-justify">
-				<p>A Graus surgiu de um conhecimento profundo do mercado de refrigeração em Goiás. Há 19 anos, somos comprometidos em fazer mais, melhor e em menos tempo. Nossos serviços são realizados no local, sem a necessidadede remover seu equipamento do PDV.</p>
+				<p>A Graus surgiu de um conhecimento profundo do mercado de refrigeração em Goiás. Há 19 anos, somos comprometidos em fazer mais, melhor e em menos tempo. Nossos serviços são realizados no local, sem a necessidade de remover seu equipamento do PDV.</p>
 
 				<p>Outro compromisso que é nossa marca registrada é cuidar da apresentação dos seus equipamentos. Temos peças originais e cuidamos para que seus aparelhos tenham aparência perfeita, o que, para o seu consumidor final, significa cuidado, asseio e confiabilidade.</p>
 
@@ -252,9 +252,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</p>
 			</div>
 			<div class="col-6">
-				<!-- SnapWidget -->
-				<script src="https://snapwidget.com/js/snapwidget.js"></script>
-				<iframe src="https://snapwidget.com/embed/767523" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
+			<!-- SnapWidget -->
+			<script src="https://snapwidget.com/js/snapwidget.js"></script>
+			<iframe src="https://snapwidget.com/embed/767523" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
 			</div>
 		</div>
 	</div>
