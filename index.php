@@ -38,7 +38,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</div>
 			<div id="redes-telefone" class="col-3 d-flex align-items-center justify-content-between pr-0">
 				<a href="tel:(62) 3586-5656"><b>(62) 3586-5656</b></a>
-				<a href="https://www.facebook.com/graussolucoes/"><img src="img/fb.png" width="20" alt="Facebook"></a>
+				<a href="https://www.facebook.com/grausrefrigeracoes/"><img src="img/fb.png" width="20" alt="Facebook"></a>
 				<a href="https://instagram.com/grausrefrigeracao"><img src="img/ig.png" width="20" alt="Instagram"></a>
 
 			</div>
