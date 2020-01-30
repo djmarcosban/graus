@@ -17,6 +17,8 @@ function getCaptcha($SecretKey){
 
 $Return = getCaptcha($_POST['g-recaptcha-response']);
 
+var_dump($_POST);
+
 if($Return->success == true && $Return->score > 0.5){
 
   if(isset( $_POST['empresa'] ) && !empty( $_POST['empresa']) &&
