@@ -9,11 +9,9 @@ define('SECRET_KEY','6Lf8NtQUAAAAAJfTMts4bzBq9XNTmU0d_uRZnxud');
 header("Content-type: text/html; charset=utf-8");
 date_default_timezone_set('America/Sao_Paulo');
 
-echo $_POST['g-recaptcha-response'];
-
 //only run when form is submitted
 if(isset($_POST['g-recaptcha-response'])) {
-    $secretKey = '6Lf8NtQUAAAAAJfTMts4bzBq9XNTmU0d_uRZnxud';
+    $secretKey = SECRET_KEY;
     $response = $_POST['g-recaptcha-response'];     
     $remoteIp = $_SERVER['REMOTE_ADDR'];
 
@@ -22,7 +20,7 @@ if(isset($_POST['g-recaptcha-response'])) {
     $result = json_decode($reCaptchaValidationUrl, TRUE);
 
     //get response along side with all results
-    print_r($result);
+    var_dump($result);
 
     if($result['success'] == 1) {
         //True - What happens when user is verified
