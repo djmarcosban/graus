@@ -14,7 +14,8 @@ if (isset($_POST['g-recaptcha-response'])) {
     $url = 'https://www.google.com/recaptcha/api/siteverify';
     $data = array(
         'secret' => SECRET_KEY,
-        'response' => $captcha
+        'response' => $captcha,
+        'remoteip' => $_SERVER['REMOTE_ADDR']
     );
 
     $curlConfig = array(
