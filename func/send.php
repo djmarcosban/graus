@@ -4,8 +4,8 @@ use PHPMailer\PHPMailer\Exception;
 require_once ('email/PHPMailer/src/Exception.php');
 require_once ('email/PHPMailer/src/PHPMailer.php');
 require_once ('email/PHPMailer/src/SMTP.php');
-define('SITE_KEY','6Lf8NtQUAAAAAFJ1DESTzZvxDhJfeeZ9DRoNJi0H');
-define('SECRET_KEY','6Lf8NtQUAAAAAJfTMts4bzBq9XNTmU0d_uRZnxud');
+define('SITE_KEY','6LdkVtQUAAAAAGEEotvxXgl33k-kirTXch7izx1t');
+define('SECRET_KEY','6LdkVtQUAAAAADobP-NHRXOPBHD5BRKcQ45BA0UI');
 header("Content-type: text/html; charset=utf-8");
 date_default_timezone_set('America/Sao_Paulo');
 
@@ -585,8 +585,8 @@ if($jsonResponse->success == true && $jsonResponse->score > 0.5){
 
         //Recipients
         $mail->setFrom('robot@graus.com.br', 'Graus');
-        $mail->addAddress('aureosan@hotmail.com');     // Add a recipient
-        //$mail->addAddress('robot@graus.com.br');     // Add a recipient
+        //$mail->addAddress('aureosan@hotmail.com');     // Add a recipient
+        $mail->addAddress('robot@graus.com.br');     // Add a recipient
         $mail->addReplyTo('robot@graus.com.br', 'Graus');
 
         //Content

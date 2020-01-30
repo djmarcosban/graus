@@ -1,6 +1,6 @@
 <?php
-define('SITE_KEY','6Lf8NtQUAAAAAFJ1DESTzZvxDhJfeeZ9DRoNJi0H');
-define('SECRET_KEY','6Lf8NtQUAAAAAJfTMts4bzBq9XNTmU0d_uRZnxud');
+define('SITE_KEY','6LdkVtQUAAAAAGEEotvxXgl33k-kirTXch7izx1t');
+define('SECRET_KEY','6LdkVtQUAAAAADobP-NHRXOPBHD5BRKcQ45BA0UI');
 
 @$url_atual = "http" . (isset($_SERVER[HTTPS]) ? (($_SERVER[HTTPS]=="on") ? "s" : "") : "") . "://" . "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 ?>
