@@ -9,19 +9,34 @@ define('SECRET_KEY','6Lf8NtQUAAAAAJfTMts4bzBq9XNTmU0d_uRZnxud');
 header("Content-type: text/html; charset=utf-8");
 date_default_timezone_set('America/Sao_Paulo');
 
-function getCaptcha($SecretKey){
-    $Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".SECRET_KEY."&response={$SecretKey}");
-    $Return = json_decode($Response);
-    return $Return;
+if (isset($_POST['g-recaptcha-response'])) {
+    $captcha = $_POST['g-recaptcha-response'];
+    $url = 'https://www.google.com/recaptcha/api/siteverify';
+    $data = array(
+        'secret' => SECRET_KEY,
+        'response' => $captcha
+    );
+
+    $curlConfig = array(
+        CURLOPT_URL => $url,
+        CURLOPT_POST => true,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POSTFIELDS => $data
+    );
+
+    $ch = curl_init();
+    curl_setopt_array($ch, $curlConfig);
+    $response = curl_exec($ch);
+    curl_close($ch);
 }
 
-$Return = getCaptcha($_POST['g-recaptcha-response']);
+$jsonResponse = json_decode($response);
 
-var_dump($Return);
+var_dump($jsonResponse);
 
 exit;
 
-if($Return->success == true && $Return->score > 0.5){
+if($jsonResponse->success == true && $jsonResponse->score > 0.5){
 
   if(isset( $_POST['empresa'] ) && !empty( $_POST['empresa']) &&
        isset( $_POST['email'] ) && !empty( $_POST['email'] ) &&
