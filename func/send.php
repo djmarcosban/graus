@@ -34,10 +34,6 @@ if (isset($_POST['g-recaptcha-response'])) {
 
 $jsonResponse = json_decode($response);
 
-var_dump($jsonResponse);
-
-exit;
-
 if($jsonResponse->success == true && $jsonResponse->score > 0.5){
 
   if(isset( $_POST['empresa'] ) && !empty( $_POST['empresa']) &&
