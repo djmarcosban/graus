@@ -596,7 +596,8 @@ if($Return->success == true && $Return->score > 0.5){
     echo 0;
     exit;
   }
+}else{
+  echo 0;
+  exit;
 }
-echo 0;
-exit;
 ?>
