@@ -1,4 +1,7 @@
 <?php
+define('SITE_KEY','6Lf8NtQUAAAAAFJ1DESTzZvxDhJfeeZ9DRoNJi0H');
+define('SECRET_KEY','6Lf8NtQUAAAAAJfTMts4bzBq9XNTmU0d_uRZnxud');
+
 @$url_atual = "http" . (isset($_SERVER[HTTPS]) ? (($_SERVER[HTTPS]=="on") ? "s" : "") : "") . "://" . "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 ?>
 <!DOCTYPE html>
@@ -23,6 +26,7 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+	<script src='https://www.google.com/recaptcha/api.js?render=<?php echo SITE_KEY; ?>'></script>
 </head>
 <body <?php if(isset($_GET['anime'])){echo 'onload="anime(\''.$_GET['anime'].'\')"';}?>>
 <!-- Google Tag Manager (noscript) -->
@@ -223,6 +227,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								<input type="submit" value="SOLICITAR CONTATO" class="btn bg-blue2" style="font-weight: 900">
 							</div>
 						</div>
+						<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
 					</form>
 				</div>
 			</div>
@@ -338,5 +343,13 @@ function errorForm(){
 
 </script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<script type="text/javascript">
+grecaptcha.ready(function() {
+	grecaptcha.execute('<?php echo SITE_KEY; ?>', {action: 'homepage'})
+	.then(function(token) {
+		document.getElementById('g-recaptcha-response').value=token;
+	});
+});
+</script>
 </body>
 </html>
