@@ -193,7 +193,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="col-9 mx-auto" id="contato">
 				<h2 class="color-blue2 text-center mb-5" style="font-weight: 900">FALE CONOSCO</h2>
 				<div id="d-form">
-					<form action="func/send.php" method="post" id="form">
+					<form action="https://graus.com.br/web/func/send.php" method="post" id="form">
 						<div class="row">
 							<div class="col-6">
 								<div class="form-group">
@@ -222,12 +222,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								</div>
 							</div>
 						</div>
+						<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
 						<div class="row mt-2">
 							<div class="col-12 d-flex justify-content-center">
 								<input type="submit" value="SOLICITAR CONTATO" class="btn bg-blue2" style="font-weight: 900">
 							</div>
 						</div>
-						<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
 					</form>
 				</div>
 			</div>
