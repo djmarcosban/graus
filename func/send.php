@@ -9,31 +9,32 @@ define('SECRET_KEY','6Lf8NtQUAAAAAJfTMts4bzBq9XNTmU0d_uRZnxud');
 header("Content-type: text/html; charset=utf-8");
 date_default_timezone_set('America/Sao_Paulo');
 
-if (isset($_POST['g-recaptcha-response'])) {
-    $captcha = $_POST['g-recaptcha-response'];
-    $url = 'https://www.google.com/recaptcha/api/siteverify';
-    $data = array(
-        'secret' => SECRET_KEY,
-        'response' => $captcha,
-        'remoteip' => $_SERVER['REMOTE_ADDR']
-    );
+echo $_POST['g-recaptcha-response'];
 
-    $curlConfig = array(
-        CURLOPT_URL => $url,
-        CURLOPT_POST => true,
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_POSTFIELDS => $data
-    );
+//only run when form is submitted
+if(isset($_POST['g-recaptcha-response'])) {
+    $secretKey = '6Lf8NtQUAAAAAJfTMts4bzBq9XNTmU0d_uRZnxud';
+    $response = $_POST['g-recaptcha-response'];     
+    $remoteIp = $_SERVER['REMOTE_ADDR'];
 
-    $ch = curl_init();
-    curl_setopt_array($ch, $curlConfig);
-    $response = curl_exec($ch);
-    curl_close($ch);
+
+    $reCaptchaValidationUrl = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$response&remoteip=$remoteIp");
+    $result = json_decode($reCaptchaValidationUrl, TRUE);
+
+    //get response along side with all results
+    print_r($result);
+
+    if($result['success'] == 1) {
+        //True - What happens when user is verified
+        $userMessage = '<div>Success: you\'ve made it :)</div>';
+    } else {
+        //False - What happens when user is not verified
+        $userMessage = '<div>Fail: please try again :(</div>';
+    }
+
+echo $userMessage;
 }
 
-$jsonResponse = json_decode($response);
-
-var_dump($jsonResponse);
 
 exit;
 

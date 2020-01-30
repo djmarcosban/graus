@@ -15,7 +15,7 @@ define('SECRET_KEY','6Lf8NtQUAAAAAJfTMts4bzBq9XNTmU0d_uRZnxud');
 	})(window,document,'script','dataLayer','GTM-NTW837V');</script>
 	<!-- End Google Tag Manager -->
 	<title>Graus</title>
-	<base href="https://graus.com.br/web/">
+	<!--<base href="https://graus.com.br/web/">-->
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -193,7 +193,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="col-9 mx-auto" id="contato">
 				<h2 class="color-blue2 text-center mb-5" style="font-weight: 900">FALE CONOSCO</h2>
 				<div id="d-form">
-					<form action="https://graus.com.br/web/func/send.php" method="post" id="form">
+					<form action="func/send.php" method="post" id="form">
 						<div class="row">
 							<div class="col-6">
 								<div class="form-group">
@@ -348,6 +348,7 @@ grecaptcha.ready(function() {
 	grecaptcha.execute('<?php echo SITE_KEY; ?>', {action: 'homepage'})
 	.then(function(token) {
 		document.getElementById('g-recaptcha-response').value=token;
+		console.log(token);
 	});
 });
 </script>
