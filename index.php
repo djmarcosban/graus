@@ -29,6 +29,16 @@ define('SECRET_KEY','6Lf8NtQUAAAAAJfTMts4bzBq9XNTmU0d_uRZnxud');
 	<script src='https://www.google.com/recaptcha/api.js?render=<?php echo SITE_KEY; ?>'></script>
 </head>
 <body <?php if(isset($_GET['anime'])){echo 'onload="anime(\''.$_GET['anime'].'\')"';}?>>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154111482-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-154111482-1');
+</script>
+	
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTW837V"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
